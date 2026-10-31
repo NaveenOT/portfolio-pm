@@ -1,0 +1,1 @@
+{"name":"terminal-portfolio","private":true,"type":"module","scripts":{"start":"node server.js","check":"node --check dist/app.js && node --check dist/content.js"}}
