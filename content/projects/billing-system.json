@@ -1,0 +1,43 @@
+{
+  "id": "billing-system",
+  "title": "Invenbill — retail billing",
+  "status": "Live in a Chennai retail shop",
+  "description": "A desktop billing and inventory tool built around a real shop’s daily workflow.",
+  "type": "RETAIL OPERATIONS",
+  "stack": [
+    "Electron",
+    "React",
+    "Vite",
+    "SQLite",
+    "Chart.js",
+    "jsPDF"
+  ],
+  "sections": [
+    [
+      "Problem",
+      "A local retailer needed checkout, invoicing, inventory, and sales tracking in one desktop workflow."
+    ],
+    [
+      "Discovery & ownership",
+      "Worked directly with the store owner to gather requirements, incorporate feedback, and iteratively refine the user experience. Built and maintained the application for the shop."
+    ],
+    [
+      "Product decisions",
+      "An offline-first SQLite database keeps billing available without a network connection. Product codes support quick access at checkout; GST calculations and printable invoices reduce repetitive manual work."
+    ],
+    [
+      "What shipped",
+      "Billing with line items and notes; catalogue and inventory management; revenue, profit, and expense dashboards; expense logging; and PDF invoice export."
+    ],
+    [
+      "Evidence",
+      "Used for 50+ daily transactions, as documented in my resume. The application is actively used in a retail shop in Chennai."
+    ],
+    [
+      "Technical tradeoff",
+      "Local storage supports offline operation and simple migration by copying billing.db. Backups remain a responsibility of the local installation."
+    ]
+  ],
+  "order": 1,
+  "url": "https://github.com/NaveenOT/billing-system"
+}

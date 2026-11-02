@@ -1,0 +1,37 @@
+{
+  "id": "smart-ai-checkout",
+  "title": "Smart AI Checkout",
+  "status": "Prototype",
+  "description": "Detect fruit from a Raspberry Pi camera feed and assemble an itemised bill.",
+  "type": "COMPUTER VISION",
+  "stack": [
+    "Python",
+    "YOLOv8",
+    "Streamlit",
+    "Raspberry Pi",
+    "OpenCV"
+  ],
+  "sections": [
+    [
+      "Problem",
+      "Explore a checkout workflow that recognises produce without barcodes or manual item entry."
+    ],
+    [
+      "Workflow",
+      "A Raspberry Pi camera streams over the local network. A user-triggered scan samples ten frames at 0.15-second intervals, filters fruit detections, aggregates quantities, and generates a GST-ready bill."
+    ],
+    [
+      "Product decisions",
+      "Run inference on demand rather than continuously. Show confidence scores, included and excluded detections, and an annotated frame so results can be inspected."
+    ],
+    [
+      "Capabilities",
+      "Live video, a custom-trained YOLOv8 detector, itemised billing, summary metrics, a debug inspector, and annotated images."
+    ],
+    [
+      "Status & limitations",
+      "Computer vision checkout prototype. Detection accuracy, billing reliability, and deployment outcomes have not been supplied."
+    ]
+  ],
+  "order": 5
+}

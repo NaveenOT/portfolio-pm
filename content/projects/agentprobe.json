@@ -1,0 +1,41 @@
+{
+  "id": "agentprobe",
+  "title": "AgentProbe",
+  "status": "Testing framework",
+  "description": "An evidence-led workflow for evaluating prompt-injection resilience in authorized AI systems.",
+  "type": "AI EVALUATION",
+  "stack": [
+    "FastAPI",
+    "Next.js",
+    "LangGraph",
+    "MongoDB",
+    "Playwright"
+  ],
+  "sections": [
+    [
+      "Problem",
+      "Testing an AI system is only useful when findings can be reproduced, compared, and translated into a remediation decision."
+    ],
+    [
+      "Product workflow",
+      "Profile an authorized target, select tests, execute through an API or browser, evaluate evidence, and produce a severity-based report. A deliberately vulnerable local chatbot supports controlled demonstrations."
+    ],
+    [
+      "Key decisions",
+      "Keep recorded verdicts separate from AI recommendations. Mark unavailable evaluations as unknown instead of counting them as passed. Pair exact prompts and criteria when comparing runs."
+    ],
+    [
+      "Capabilities",
+      "Saved run history, replay, baseline comparison, cancellation and resume, YAML-defined test cases, and concise PDF reports with evidence references."
+    ],
+    [
+      "Boundaries",
+      "Designed for explicitly authorized systems. Browser login is completed manually; the framework does not request account passwords or bypass verification."
+    ],
+    [
+      "Evidence",
+      "The supplied project documentation describes the implemented workflow. No adoption or effectiveness metric is claimed here."
+    ]
+  ],
+  "order": 2
+}

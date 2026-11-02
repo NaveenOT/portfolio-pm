@@ -1,0 +1,31 @@
+{
+  "id": "astrotype",
+  "title": "Astrotype",
+  "status": "Playable game",
+  "description": "A wave-based typing shooter that turns word accuracy into a survival challenge.",
+  "type": "INTERACTIVE EXPERIENCE",
+  "stack": [
+    "C++",
+    "raylib"
+  ],
+  "sections": [
+    [
+      "Experience",
+      "Words fall toward a spaceship on asteroids. Type the matching word and press Enter to fire; later waves increase speed and frequency."
+    ],
+    [
+      "Feedback loop",
+      "Laser effects, collisions, explosions, sound, and a scoreboard make progress and failure visible."
+    ],
+    [
+      "Implementation",
+      "Trie-based word matching, a skew heap for the top five scores, and file-based persistence. Includes menu, gameplay, scoreboard, and game-over screens."
+    ],
+    [
+      "Evidence",
+      "Built as a typing game. No improvement in typing performance or player adoption is claimed."
+    ]
+  ],
+  "order": 4,
+  "url": "https://github.com/NaveenOT/Astrotype"
+}

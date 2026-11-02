@@ -1,0 +1,36 @@
+{
+  "id": "clouddrop",
+  "title": "CloudDrop",
+  "status": "In progress",
+  "description": "Pair desktop and mobile devices with a QR code to access files stored on your own system.",
+  "type": "FILE SHARING",
+  "stack": [
+    "Flutter",
+    "Go",
+    "Cloudflare Tunnel"
+  ],
+  "sections": [
+    [
+      "Problem",
+      "Moving between desktop and mobile should not require uploading every file to a separate storage service."
+    ],
+    [
+      "Solution",
+      "The Flutter desktop app starts a Go HTTP server and a Cloudflare tunnel. The mobile app scans the QR code to access the selected directory through the server API."
+    ],
+    [
+      "Product decisions",
+      "QR pairing reduces manual URL entry. Files stay on the host system; network access depends on the server and, for remote access, the tunnel."
+    ],
+    [
+      "Current scope",
+      "File serving, upload/download metadata, mobile access, desktop server startup, and QR generation."
+    ],
+    [
+      "Status",
+      "In progress. No public release or usage metric is claimed."
+    ]
+  ],
+  "order": 3,
+  "url": "https://github.com/NaveenOT/CloudDrop"
+}
