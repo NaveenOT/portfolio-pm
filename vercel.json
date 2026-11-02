@@ -1,0 +1,1 @@
+{"framework":null,"buildCommand":"node scripts/build-projects.mjs","outputDirectory":"dist","installCommand":"echo No dependencies to install"}

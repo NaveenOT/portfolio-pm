@@ -18,7 +18,7 @@ Open http://127.0.0.1:4173/.
 1. Copy `content/projects/billing-system.json` to `content/projects/your-project.json`.
 2. Fill in the fields below with your own evidence and project details.
 3. Commit the new file to `main`. No application or index changes are needed.
-4. GitHub Actions validates the files, generates the catalogue, and deploys `dist` to GitHub Pages once hosting is configured.
+4. Vercel generates the catalogue and deploys `dist` on each push after the repository is connected.
 
 ```json
 {
@@ -42,11 +42,9 @@ Open http://127.0.0.1:4173/.
 
 The landing-page index, terminal `/projects`, search, and expanded resume supplement all use the same generated catalogue. For local updates, run `node scripts/build-projects.mjs` and refresh. Never edit `dist/projects.generated.js` by hand.
 
-## One-time GitHub setup
+## One-time repository setup
 
-This checkout has no GitHub remote yet. Connect a repository, push `main`, then choose **Settings → Pages → Build and deployment → Source: GitHub Actions**. `.github/workflows/pages.yml` handles subsequent pushes. Pages availability for private repositories depends on the GitHub plan; repository privacy and website visibility are separate settings. The site includes the supplied resume and its contact details.
-
-Until this setup is complete, a local commit does not publish a live website.
+Connect a GitHub repository and push `main`, then import it into Vercel using the settings below. Until the repository and hosting are connected, a local commit does not publish a live website.
 
 ## Other content
 
@@ -77,3 +75,11 @@ node --check dist/content.js
 node --check dist/projects.generated.js
 node --check server.js
 ```
+
+## Deploy to Vercel
+
+Import the GitHub repository into Vercel. Select framework preset **Other** and use this directory as the project root. `vercel.json` sets the build command to `node scripts/build-projects.mjs` and output directory to `dist`. No dependencies, server, database, or environment variables are required.
+
+Vercel rebuilds on each push to the connected production branch. A new `content/projects/*.json` file is picked up during that build. Deployment is handled by Vercel.
+
+Stack: semantic HTML, CSS, vanilla JavaScript ES modules, JSON content, and a Node.js build script. `server.js` is for local preview only.
